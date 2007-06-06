@@ -1,0 +1,86 @@
+chemtool
+------------------------------------------
+Chemtool is a small program for drawing chemical structures on Linux 
+and Unix systems using the GTK toolkit under X11.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  glib2-2.12.12-1
+  gtk2-x11-2.10.12-1
+  libEMF1-1.0.3-1
+  libX11_6-1.1.1-1
+  libintl8-0.15-1
+  pango-1.16.4-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
+
+Canonical download:
+  http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
+
+-------------------------------------------
+
+Build instructions:
+  unpack chemtool-1.6.10-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./chemtool-1.6.10-X.cygport all
+
+This will create:
+  /usr/src/chemtool-1.6.10-X-src.tar.bz2
+  /usr/src/chemtool-1.6.10-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/chemtool.sh
+  /usr/bin/chemtool.exe
+  /usr/bin/cht.exe
+  /usr/share/applnk/Graphics/chemtool.desktop
+  /usr/share/doc/Cygwin/chemtool-1.6.10.README
+  /usr/share/doc/chemtool-1.6.10/COPYING
+  /usr/share/doc/chemtool-1.6.10/ChangeLog
+  /usr/share/doc/chemtool-1.6.10/INSTALL
+  /usr/share/doc/chemtool-1.6.10/NEWS
+  /usr/share/doc/chemtool-1.6.10/README
+  /usr/share/doc/chemtool-1.6.10/TODO
+  /usr/share/icons/hicolor/32x32/mimetypes/chemtool.png
+  /usr/share/locale/cs/LC_MESSAGES/chemtool.mo
+  /usr/share/locale/de/LC_MESSAGES/chemtool.mo
+  /usr/share/locale/fr/LC_MESSAGES/chemtool.mo
+  /usr/share/locale/nl/LC_MESSAGES/chemtool.mo
+  /usr/share/locale/pl/LC_MESSAGES/chemtool.mo
+  /usr/share/locale/pt_BR/LC_MESSAGES/chemtool.mo
+  /usr/share/locale/ru/LC_MESSAGES/chemtool.mo
+  /usr/share/man/man1/chemtool.1.gz
+  /usr/share/man/man1/cht.1.gz
+  /usr/share/mime-types/chemtool.keys
+  /usr/share/mime-types/chemtool.mime
+  /usr/share/mimelnk/application/x-chemtool.desktop
+  /usr/share/pixmaps/mc/gnome-application-chemtool.png
+
+------------------
+
+Port Notes:
+
+----- version 1.6.10-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

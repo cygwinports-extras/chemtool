@@ -1,0 +1,5 @@
+category: Gnome Science
+requires: cygwin glib2 gtk2-x11 libEMF1 libX11_6 libintl8 pango
+sdesc: "GTK+ chemical structures drawing program"
+ldesc: "Chemtool is a small program for drawing chemical structures on 
+Linux and Unix systems using the GTK toolkit under X11."
