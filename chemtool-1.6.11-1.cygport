@@ -1,0 +1,26 @@
+DESCRIPTION="GTK+ chemical structure drawing program"
+HOMEPAGE="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/"
+SRC_URI="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/${P}.tar.gz"
+
+DIFF_EXCLUDES="po"
+
+CPPFLAGS+=" -I/usr/include/libEMF"
+
+src_compile() {
+	cd ${S}
+	NO_AUTOHEADER=1 cygautoreconf
+	lndirs
+	cd ${B}
+	cygconf --disable-gtktest --enable-emf --with-kdedir=/usr
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	make_desktop_entry chemtool "Chemtool" chemtool "GTK;Education;Science;Chemistry"
+	doicon ${S}/gnome/chemtool.png
+	cp -r ${S}/kde/{icons,mimelnk} ${D}/usr/share/
+	cp -r ${S}/gnome/mime-types ${D}/usr/share/mime-info
+}
